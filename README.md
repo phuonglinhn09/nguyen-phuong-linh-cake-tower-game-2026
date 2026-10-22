@@ -1,36 +1,36 @@
 # 🍬 Candy Tower (Tháp Bánh Kẹo) - 2D Physics Game
 
-> **Một dự án game 2D mô phỏng vật lý được phát triển độc lập sử dụng Godot Engine.**
+> **An independent 2D physics-based puzzle and balancing game developed from scratch using Godot Engine.**
 
 [![Godot Engine](https://img.shields.io/badge/Godot-4.x-blue.svg)](https://godotengine.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android-orange)](#)
 
 ---
 
-## 📌 Executive Summary / Tổng quan dự án
-* **Tác giả:** Nguyễn Phương Linh
-* **Công nghệ sử dụng:** Godot Engine (GDScript), Box2D Physics Simulation.
-* **Thời gian thực hiện:** [Tháng/Năm]
-* **Demo / Release:** [Link tải file game .exe hoặc link xem video Demo]
+## 📌 Executive Summary
+* **Author:** Nguyen Phuong Linh
+* **Engine & Language:** Godot Engine (GDScript), Box2D Physics Simulation
+* **Project Type:** Independent STEM / Game Development Project
+* **Quick Links:** [Download Releases](../../releases) | [Demo Video](#) *(Optional: Insert link)*
 
-Dự án được xây dựng nhằm nghiên cứu và ứng dụng cơ chế vật lý 2D (khái niệm trọng tâm, lực ma sát, sự va chạm biến dạng) vào lập trình game giải đố, tạo ra trải nghiệm tương tác trực quan cho người chơi.
-
----
-
-## 🎮 Gameplay & Highlights (Tính năng chính)
-- **Cơ chế mô phỏng vật lý thời gian thực:** Áp dụng `RigidBody2D` và `Area2D` để tính toán chính xác trọng tâm và điểm tựa của các khối bánh kẹo.
-- **Hệ thống tính điểm động (Dynamic Scoring):** Độ bền và điểm số của tháp được tính dựa trên độ lệch trọng tâm và số lượng vật thể xếp đè lên nhau.
-- **Giao diện & Trải nghiệm (UI/UX):** Xây dựng hoàn chỉnh màn hình Menu, Pause, High Score và Game Over responsive trên nhiều độ phân giải.
+This project explores real-time 2D physics mechanics—specifically center-of-mass calculation, friction interaction, and rigid-body dynamics—translated into an interactive, engaging puzzle-balancing experience.
 
 ---
 
-## 🛠️ Technical Architecture (Kiến trúc Kỹ thuật)
+## 🎮 Gameplay & Core Features
+* **Real-time Physics Simulation:** Utilizes `RigidBody2D` and `Area2D` nodes to accurately calculate and simulate gravity, collision impact, and structural balance.
+* **Dynamic Scoring System:** Evaluates the stability and height of the candy tower dynamically based on weight distribution and center of gravity offsets.
+* **Responsive UI/UX:** Complete game lifecycle management including Main Menu, Pause Menu, High Score tracking, and Game Over states.
 
-### 1. Cấu trúc Scene & Node (Scene Hierarchy)
+---
+
+## 🛠️ Technical Architecture
+
+### 1. Scene & Node Hierarchy
 ```text
 Main (Node2D)
-├── Environment (StaticBody2D - Mặt đất & Vật cản)
-├── CandySpawner (Node2D - Quản lý sinh vật thể)
-├── TowerManager (Script - Tính toán trọng tâm & cân bằng)
-└── UILayer (CanvasLayer - Màn hình UI & Điểm số)
+├── Environment (StaticBody2D - Ground & Boundaries)
+├── CandySpawner (Node2D - Object Generation & Input Handling)
+├── TowerManager (Script - Center of Mass & Balance Calculation)
+└── UILayer (CanvasLayer - HUD, Score, & Menu Screens)
