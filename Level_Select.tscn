@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cvwi6y4pbkus0"]
+
+[ext_resource type="Script" uid="uid://djmx0xpkfmai5" path="res://level_select.gd" id="1_twgyq"]
+[ext_resource type="Texture2D" uid="uid://cb8gxr73o28dq" path="res://Background.png" id="2_ufaj5"]
+[ext_resource type="Texture2D" uid="uid://bomcpsswprx2m" path="res://Rectangle 4.png" id="3_jaj0m"]
+[ext_resource type="Texture2D" uid="uid://3sewug2wn0pt" path="res://Cloud.png" id="3_q8rit"]
+[ext_resource type="Texture2D" uid="uid://cxnw7enydbhhu" path="res://Rectangle 1.png" id="4_q8rit"]
+[ext_resource type="Texture2D" uid="uid://swykxiex8y25" path="res://Rectangle 2.png" id="6_bgsqk"]
+
+[node name="LevelSelect" type="Control" unique_id=1479365093]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_twgyq")
+outline_color = Color(0.10980392, 0.06666667, 0.105882354, 1)
+
+[node name="Background" type="ColorRect" parent="." unique_id=1307585367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=425827622]
+position = Vector2(541, 962)
+texture = ExtResource("2_ufaj5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=593042673]
+position = Vector2(55.99997, 1107.0002)
+rotation = 0.24085544
+scale = Vector2(2, 2)
+texture = ExtResource("4_q8rit")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1811808546]
+position = Vector2(31.693665, 1669.125)
+scale = Vector2(0.54795885, 0.6069259)
+texture = ExtResource("3_q8rit")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1536874603]
+position = Vector2(1142.7051, 1661.875)
+scale = Vector2(0.61695015, 0.6169502)
+texture = ExtResource("3_q8rit")
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D5" unique_id=786343672]
+position = Vector2(-296.14258, -345.0442)
+rotation = -0.36128312
+scale = Vector2(2.4313145, 2.4313145)
+texture = ExtResource("3_jaj0m")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=412968584]
+position = Vector2(885, 691.00006)
+rotation = -0.09948378
+scale = Vector2(1.0499997, 1.0499997)
+texture = ExtResource("6_bgsqk")
+flip_h = true
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1641536661]
+layout_mode = 0
+offset_left = -32.0
+offset_top = -27.0
+offset_right = 72.0
+offset_bottom = -4.0
+text = "SELECT LEVEL"
+horizontal_alignment = 1
+
+[node name="LevelGrid" type="GridContainer" parent="." unique_id=1438308184]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 16.0
+size_flags_horizontal = 3
+
+[node name="BackButton" type="Button" parent="." unique_id=1594177968]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 36.0
+offset_right = 72.0
+offset_bottom = 67.0
+text = "BACK"

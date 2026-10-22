@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bfovb2w0k3h6t"]
+
+[ext_resource type="Script" uid="uid://drerxx1dqdh5u" path="res://Cake.gd" id="1_kkshh"]
+[ext_resource type="Texture2D" uid="uid://cxnw7enydbhhu" path="res://Rectangle 1.png" id="2_n3ihd"]
+[ext_resource type="Texture2D" uid="uid://swykxiex8y25" path="res://Rectangle 2.png" id="3_0ngo1"]
+[ext_resource type="Texture2D" uid="uid://bomcpsswprx2m" path="res://Rectangle 4.png" id="4_n3ihd"]
+[ext_resource type="Texture2D" uid="uid://bklk02mbojrgh" path="res://Rectangle 3.png" id="5_0ngo1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1vivr"]
+friction = 0.0
+rough = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vrlf"]
+
+[node name="Cake" type="RigidBody2D" unique_id=1628312237]
+physics_material_override = SubResource("PhysicsMaterial_1vivr")
+continuous_cd = 2
+script = ExtResource("1_kkshh")
+cake_textures = Array[Texture2D]([ExtResource("2_n3ihd"), ExtResource("3_0ngo1"), ExtResource("4_n3ihd"), ExtResource("5_0ngo1")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2062204556]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1735352828]
+shape = SubResource("RectangleShape2D_8vrlf")
